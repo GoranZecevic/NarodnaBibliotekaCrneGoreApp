@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/oNama" android:title="O Nama" android:icon="@drawable/ic_team"/>
+    <item android:id="@+id/katalozi" android:title="Katalozi" android:icon="@drawable/ic_catalog"/>
+    <item android:id="@+id/usluge" android:title="Usluge" android:icon="@drawable/ic_customer"/>
+    <item android:id="@+id/kolekcije" android:title="Kolekcije" android:icon="@drawable/ic_books_stack_of_three"/>
+    <item android:id="@+id/dogadjaji" android:title="Dogadjaji" android:icon="@drawable/ic_calendar"/>
+    <item android:id="@+id/izdanja" android:title="Nasa izdanja" android:icon="@drawable/ic_library"/>
+    <item android:id="@+id/kontakt" android:title="Kontakt" android:icon="@drawable/ic_contact"/>
+
+</menu>

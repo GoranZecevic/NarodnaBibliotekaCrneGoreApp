@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">NarodnaBibliotekaCrneGoreApp</string>
+    <string name="app_name">Nacionalna biblioteka Crne Gore</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 </resources>
