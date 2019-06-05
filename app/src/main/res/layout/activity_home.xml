@@ -7,12 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".Home">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </LinearLayout>
-
     <android.support.design.widget.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
@@ -22,10 +16,22 @@
         app:menu="@menu/navigation_menu"
         app:headerLayout="@layout/header"
         android:layout_gravity="start">
-
-
     </android.support.design.widget.NavigationView>
 
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ViewFlipper
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/v_flipper">
+        </ViewFlipper>
+
+
+    </FrameLayout>
 
 
 </android.support.v4.widget.DrawerLayout>
