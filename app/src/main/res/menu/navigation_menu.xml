@@ -5,31 +5,31 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
-        <item android:id="@+id/oNama"
+        <item android:id="@+id/about"
             android:title="O Nama"
             android:icon="@drawable/ic_team"/>
 
-        <item android:id="@+id/katalozi"
+        <item android:id="@+id/catalog"
             android:title="Katalozi"
             android:icon="@drawable/ic_catalog"/>
 
-        <item android:id="@+id/usluge"
+        <item android:id="@+id/services"
             android:title="Usluge"
             android:icon="@drawable/ic_customer"/>
 
-        <item android:id="@+id/kolekcije"
+        <item android:id="@+id/collections"
             android:title="Kolekcije"
             android:icon="@drawable/ic_books_stack_of_three"/>
 
-        <item android:id="@+id/dogadjaji"
+        <item android:id="@+id/events"
             android:title="Dogadjaji"
             android:icon="@drawable/ic_calendar"/>
 
-        <item android:id="@+id/izdanja"
+        <item android:id="@+id/our_edition"
             android:title="Nasa izdanja"
             android:icon="@drawable/ic_library"/>
 
-        <item android:id="@+id/kontakt"
+        <item android:id="@+id/contact"
             android:title="Kontakt"
             android:icon="@drawable/ic_contact"/>
     </group>
@@ -40,7 +40,7 @@
                 android:title="Crnogorski"
                 android:icon="@drawable/ic_contact"/>
 
-            <item android:id="@+id/engleski"
+            <item android:id="@+id/english"
                 android:title="Engleske"
                 android:icon="@drawable/ic_contact"/>
         </menu>

@@ -16,7 +16,15 @@ import android.widget.ImageView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
-public class Home extends AppCompatActivity {
+import com.androidapp.narodnabibliotekacrnegoreapp.fragments.AboutFragment;
+import com.androidapp.narodnabibliotekacrnegoreapp.fragments.CatalogFragment;
+import com.androidapp.narodnabibliotekacrnegoreapp.fragments.CollectionsFragment;
+import com.androidapp.narodnabibliotekacrnegoreapp.fragments.ContactFragment;
+import com.androidapp.narodnabibliotekacrnegoreapp.fragments.EventsFragment;
+import com.androidapp.narodnabibliotekacrnegoreapp.fragments.OurEditionFragment;
+import com.androidapp.narodnabibliotekacrnegoreapp.fragments.ServicesFragment;
+
+public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout mDrawerlayout;
     private ActionBarDrawerToggle mToggle;
@@ -41,6 +49,15 @@ public class Home extends AppCompatActivity {
         mToggle = new ActionBarDrawerToggle(this, mDrawerlayout, toolbar, R.string.open, R.string.close);
         mDrawerlayout.addDrawerListener(mToggle);
         mToggle.syncState();
+
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        if(savedInstanceState == null){
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                    new AboutFragment()).commit();
+            navigationView.setCheckedItem(R.id.about);
+        }
 
         v_flipper = findViewById(R.id.v_flipper);
 
@@ -75,5 +92,51 @@ public class Home extends AppCompatActivity {
     public void openContactPage(){
         Intent intent = new Intent(this, Contact.class);
         startActivity(intent);
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        switch (menuItem.getItemId()){
+            case R.id.about:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new AboutFragment()).commit();
+                break;
+
+            case R.id.catalog:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new CatalogFragment()).commit();
+                break;
+            case R.id.services:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new ServicesFragment()).commit();
+                break;
+            case R.id.collections:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new CollectionsFragment()).commit();
+                break;
+            case R.id.events:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new EventsFragment()).commit();
+                break;
+            case R.id.our_edition:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new OurEditionFragment()).commit();
+                break;
+            case R.id.contact:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new ContactFragment()).commit();
+                break;
+            case R.id.crnogorski:
+                Toast.makeText(this, "Crnogorski jezik kliknut", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.english:
+                Toast.makeText(this, "Engleski jezik kliknut", Toast.LENGTH_SHORT).show();
+                break;
+
+        }
+
+        mDrawerlayout.closeDrawer(GravityCompat.START);
+
+        return true;
     }
 }
