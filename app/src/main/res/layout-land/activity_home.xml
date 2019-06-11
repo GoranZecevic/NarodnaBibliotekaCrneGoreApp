@@ -33,11 +33,10 @@
             android:layout_height="match_parent">
 
 
-        <ViewFlipper
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:id="@+id/v_flipper">
-        </ViewFlipper>
+            <ViewFlipper
+                android:id="@+id/v_flipper"
+                android:layout_width="397dp"
+                android:layout_height="200dp"></ViewFlipper>
         </FrameLayout>
 
     </LinearLayout>
